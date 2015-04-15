@@ -1,0 +1,11 @@
+{
+    "Groups":  [
+                   "domain admins",
+                   "AvengersMansion-Engineering"
+               ],
+    "SearchRoot":  "",
+    "SMTPServer": "smtp.vodafone.co.nz",
+    "EmailFrom": "test user <windows.vm@wanion.net>",
+    "EmailTo": "windows.vm.dest@wanion.net",
+    "EmailSubject": "Group modification detected - {group}"
+}

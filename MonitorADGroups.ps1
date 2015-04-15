@@ -2,7 +2,7 @@
 
 If (-Not(Test-Path .\GroupMembers.csv)) { @() | Export-Csv .\GroupMembers.csv }
 
-$Configuration = Get-Content -Raw .\Settings.conf | ConvertFrom-Json
+$Configuration = Get-Content -Raw .\Settings.json | ConvertFrom-Json
 $GroupMembership = {Import-Csv .\GroupMembers.csv}.Invoke()
 $Text = (Get-Culture).TextInfo
 
