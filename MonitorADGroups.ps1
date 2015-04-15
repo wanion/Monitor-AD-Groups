@@ -39,13 +39,13 @@ Function Check-Group {
 		If (-Not ($GroupMembership | ? {$_.Group -eq $Group -And $_.Username -eq $SamAccountName })) {
 			$Notices += "{0} {1} ({2}) has been added." -f $Text.ToTitleCase($ObjectClass), $SamAccountName, $DisplayName
 			"$(Get-Date -Format s)`t{0} {1} ({2}) added to {3}." -f $Text.ToTitleCase($ObjectClass), $SamAccountName, $DisplayName, $Group | Add-Content GroupMonitor.log
-		$GroupMembership.Add((New-Object PSObject -Property @{
-			"Group" = $Group
-			"Username" = $SamAccountName
-			"DisplayName" = $DisplayName
-			"ObjectClass" = $ObjectClass
-			"Added" = (Get-Date -Format s)
-			}))
+            $GroupMembership.Add((New-Object PSObject -Property @{
+                "Group" = $Group
+                "Username" = $SamAccountName
+                "DisplayName" = $DisplayName
+                "ObjectClass" = $ObjectClass
+                "Added" = (Get-Date -Format s)
+                }))
 		}
 	}
 	If ($Notices.Count -gt 0) {
