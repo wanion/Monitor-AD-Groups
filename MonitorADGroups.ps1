@@ -1,4 +1,6 @@
-# Leave SearchRoot blank in configuration if you don't want to set it
+# AD Group modification monitor
+# Copyright 2015 Fred Young
+# https://github.com/wanion/Monitor-AD-Groups
 
 If (-Not(Test-Path .\GroupMembers.csv)) { @() | Export-Csv .\GroupMembers.csv }
 
